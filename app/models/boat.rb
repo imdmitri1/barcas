@@ -1,0 +1,4 @@
+class Boat < ApplicationRecord
+
+
+end
