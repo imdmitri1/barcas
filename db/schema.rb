@@ -10,16 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180313195730) do
+ActiveRecord::Schema.define(version: 20180313233749) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "boats", force: :cascade do |t|
     t.string "name", limit: 64, null: false
-    t.string "pic_link", limit: 512
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "description"
+    t.string "length", limit: 32
+    t.string "width", limit: 32
+    t.string "height", limit: 32
+    t.string "carrying", limit: 32
+    t.string "passengers", limit: 32
+    t.string "weight", limit: 32
+    t.string "madein", limit: 32
+    t.string "engine", limit: 64
   end
 
 end
