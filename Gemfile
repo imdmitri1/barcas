@@ -35,6 +35,8 @@ gem 'bootswatch'
 gem 'jquery-rails'
 gem 'popper_js', '~> 1.12.9'
 
+gem 'faker'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
