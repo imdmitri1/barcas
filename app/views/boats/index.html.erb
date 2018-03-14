@@ -1,1 +1,5 @@
-hello
+
+<% @boats.each do |boat| %>
+    <div> name: <%= link_to "#{boat.name}", boat_path(boat.id) %> </div>
+    <br>
+<% end %>
