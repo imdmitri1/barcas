@@ -15,8 +15,16 @@ class BoatsController < ApplicationController
   def create
     @boat = Boat.new(name: params[:boat][:name],
                      description: params[:boat][:description],
-                     brand_id: rand(0..6),
-                     type_id: rand(0..6)) #!!!!!!????
+                     length: params[:boat][:length],
+                     width: params[:boat][:width],
+                     height: params[:boat][:height],
+                     carrying: params[:boat][:carrying],
+                     passengers: params[:boat][:passengers],
+                     weight: params[:boat][:weight],
+                     madein: params[:boat][:madein],
+                     engine: params[:boat][:engine],
+                     brand_id: params[:boat][:brand_id],
+                     type_id: params[:boat][:type_id]) #!!!!!!????
     if @boat.save
       redirect_to '/'
     else
