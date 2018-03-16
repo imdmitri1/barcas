@@ -6,20 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-30.times do
-  Boat.create!( name: Faker::Ancient.god,
-                description: Faker::Lorem.paragraph,
-                length: "#{rand(2..10)} метров",
-                width: "#{rand(2..5)} метров",
-                height: "#{rand(50..1500)} мм",
-                carrying: "#{rand(100..1000)} кг",
-                passengers: "#{rand(2..10)} человек",
-                weight: "#{rand(100..1000)} кг",
-                madein: Faker::Coffee.origin,
-                engine: Faker::Vehicle.manufacture,
-                brand_id: rand(0..10),
-                type_id: rand(0..6))
-end
 
 10.times do
   Brand.create!(name: Faker::Company.name)
@@ -31,3 +17,18 @@ Type.create!(name: "Катера")
 Type.create!(name: "Гидроциклы")
 Type.create!(name: "Гребные")
 Type.create!(name: "Моторы")
+
+30.times do
+  Boat.create!( name: Faker::Ancient.god,
+    description: Faker::Lorem.paragraph,
+    length: "#{rand(2..10)} метров",
+    width: "#{rand(2..5)} метров",
+    height: "#{rand(50..1500)} мм",
+    carrying: "#{rand(100..1000)} кг",
+    passengers: "#{rand(2..10)} человек",
+    weight: "#{rand(100..1000)} кг",
+    madein: Faker::Coffee.origin,
+    engine: Faker::Vehicle.manufacture,
+    brand_id: rand(1..10),
+    type_id: rand(1..6))
+  end

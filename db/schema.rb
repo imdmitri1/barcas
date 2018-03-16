@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180316030118) do
+ActiveRecord::Schema.define(version: 20180316031918) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,10 +26,10 @@ ActiveRecord::Schema.define(version: 20180316030118) do
     t.string "carrying", limit: 32
     t.string "passengers", limit: 32
     t.string "weight", limit: 32
-    t.string "madein", limit: 32
-    t.string "engine", limit: 64
     t.integer "brand_id", null: false
     t.integer "type_id", null: false
+    t.string "madein", limit: 256
+    t.string "engine", limit: 256
   end
 
   create_table "brands", force: :cascade do |t|
