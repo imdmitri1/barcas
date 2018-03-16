@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 30.times do
-  Boat.create( name: Faker::Ancient.god,
+  Boat.create!( name: Faker::Ancient.god,
                 description: Faker::Lorem.paragraph,
                 length: "#{rand(2..10)} метров",
                 width: "#{rand(2..5)} метров",
@@ -16,5 +16,18 @@
                 passengers: "#{rand(2..10)} человек",
                 weight: "#{rand(100..1000)} кг",
                 madein: Faker::Coffee.origin,
-                engine: Faker::Vehicle.manufacture)
+                engine: Faker::Vehicle.manufacture,
+                brand_id: rand(0..10),
+                type_id: rand(0..6))
 end
+
+10.times do
+  Brand.create!(name: Faker::Company.name)
+end
+
+Type.create!(name: "ПВХ")
+Type.create!(name: "Моторные лодки")
+Type.create!(name: "Катера")
+Type.create!(name: "Гидроциклы")
+Type.create!(name: "Гребные")
+Type.create!(name: "Моторы")
